@@ -22,13 +22,13 @@ import (
 
 	"github.com/labstack/echo/v4"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/config"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/config"
 	gometrics "github.com/rcrowley/go-metrics"
 
-	bootstrapInterfaces "github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap/interfaces"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/interfaces"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
-	"github.com/edgexfoundry/go-mod-registry/v3/registry"
+	bootstrapInterfaces "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/interfaces"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-registry/v3/registry"
 )
 
 const (

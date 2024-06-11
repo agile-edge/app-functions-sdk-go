@@ -25,17 +25,17 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/di"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
 
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/internal/bootstrap/container"
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/internal/common"
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/internal/trigger/http"
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/internal/trigger/messagebus"
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/internal/trigger/mqtt"
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/bootstrap/container"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/common"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/trigger/http"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/trigger/messagebus"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/trigger/mqtt"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
 
-	"github.com/edgexfoundry/go-mod-bootstrap/v3/bootstrap"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

@@ -1,5 +1,5 @@
 # TODO: Go here for detailed information on Application Service configuration:
-#       https://docs.edgexfoundry.org/latest/microservices/application/GeneralAppServiceConfig/
+#       https://docs.agile-edgex.org/latest/microservices/application/GeneralAppServiceConfig/
 Writable:
   LogLevel: "INFO"
 
@@ -65,7 +65,7 @@ Trigger:
 
 # TODO: Add custom settings needed by your app service or remove if you don't have any settings.
 # This can be any Key/Value pair you need.
-# For more details see: https://docs.edgexfoundry.org/latest/microservices/application/GeneralAppServiceConfig/#application-settings
+# For more details see: https://docs.agile-edgex.org/latest/microservices/application/GeneralAppServiceConfig/#application-settings
 # Example that works with devices from the Virtual Device service:
 ApplicationSettings:
   DeviceNames: "Simple-Device01, Random-Boolean-Device, Random-Integer-Device, Random-UnsignedInteger-Device, Random-Float-Device, Random-Binary-Device, sample-numeric"
@@ -73,7 +73,7 @@ ApplicationSettings:
 # TODO: Replace this section with your actual structured custom configuration section
 #       or remove if you don't have a need for structured custom configuration
 # This can be any structure you need, but it can not contain slices. Use a maps instead of slices.
-# For more details see: https://docs.edgexfoundry.org/latest/microservices/application/GeneralAppServiceConfig/#custom-configuration
+# For more details see: https://docs.agile-edgex.org/latest/microservices/application/GeneralAppServiceConfig/#custom-configuration
 AppCustom:
   ResourceNames: "Boolean, Int32, Uint32, Float32, Binary, SwitchButton"
   SomeValue: 123

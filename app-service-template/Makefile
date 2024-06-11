@@ -26,10 +26,10 @@ APPVERSION=$(shell cat ./VERSION 2>/dev/null || echo 0.0.0)
 
 # This pulls the version of the SDK from the go.mod file. If the SDK is the only required module,
 # it must first remove the word 'required' so the offset of $2 is the same if there are multiple required modules
-SDKVERSION=$(shell cat ./go.mod | grep 'github.com/edgexfoundry/app-functions-sdk-go/v3 v' | sed 's/require//g' | awk '{print $$2}')
+SDKVERSION=$(shell cat ./go.mod | grep 'github.com/agile-edgex/app-functions-sdk-go/v3 v' | sed 's/require//g' | awk '{print $$2}')
 
 MICROSERVICE=app-new-service
-GOFLAGS=-ldflags "-X github.com/edgexfoundry/app-functions-sdk-go/v3/internal.SDKVersion=$(SDKVERSION) -X github.com/edgexfoundry/app-functions-sdk-go/v3/internal.ApplicationVersion=$(APPVERSION)" -trimpath -mod=readonly
+GOFLAGS=-ldflags "-X github.com/agile-edgex/app-functions-sdk-go/v3/internal.SDKVersion=$(SDKVERSION) -X github.com/agile-edgex/app-functions-sdk-go/v3/internal.ApplicationVersion=$(APPVERSION)" -trimpath -mod=readonly
 
 # TODO: uncomment and remove default once files are in a Github repository or
 #       remove totally including usage below
@@ -44,7 +44,7 @@ build: tidy
 tidy:
 	go mod tidy
 
-# TODO: Change the registries (edgexfoundry, nexus3.edgexfoundry.org:10004) below as needed.
+# TODO: Change the registries (agile-edgex, nexus3.agile-edgex.org:10004) below as needed.
 #       Leave them as is if service is to be upstreamed to EdgeX Foundry
 # NOTE: This is only used for local development. Jenkins CI does not use this make target
 docker:
@@ -53,9 +53,9 @@ docker:
 	    --build-arg https_proxy \
 		-f Dockerfile \
 		--label "git_sha=$(GIT_SHA)" \
-		-t edgexfoundry/app-new-service:$(GIT_SHA) \
-		-t edgexfoundry/app-new-service:${APPVERSION}-dev \
-		-t nexus3.edgexfoundry.org:10004/app-new-service:${APPVERSION}-dev \
+		-t agile-edgex/app-new-service:$(GIT_SHA) \
+		-t agile-edgex/app-new-service:${APPVERSION}-dev \
+		-t nexus3.agile-edgex.org:10004/app-new-service:${APPVERSION}-dev \
 		.
 
 # The test-attribution-txt.sh scripts are required for upstreaming to EdgeX Foundry.

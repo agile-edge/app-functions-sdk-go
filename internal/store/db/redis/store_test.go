@@ -22,13 +22,13 @@
 package redis
 
 import (
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
 	"testing"
 
-	bootstrapConfig "github.com/edgexfoundry/go-mod-bootstrap/v3/config"
+	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
 	"github.com/stretchr/testify/require"
 
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/internal/store/db"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/store/db"
 
 	"github.com/google/uuid"
 )

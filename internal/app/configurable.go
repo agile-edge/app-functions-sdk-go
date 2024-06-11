@@ -22,12 +22,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/internal/common"
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/pkg/interfaces"
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/pkg/transforms"
-	"github.com/edgexfoundry/app-functions-sdk-go/v3/pkg/util"
-	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
-	coreCommon "github.com/edgexfoundry/go-mod-core-contracts/v3/common"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/common"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/transforms"
+	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/util"
+	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	coreCommon "github.com/agile-edgex/go-mod-core-contracts/v3/common"
 )
 
 const (
