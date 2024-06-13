@@ -12,7 +12,7 @@ For a list of examples please visit https://docs.agile-edgex.org/latest/examples
 
 ## Build Prerequisites
 
-Please see the [edgex-go README](https://github.com/agile-edgex/edgex-go/blob/master/README.md#prerequisites).
+Please see the [edgex README](https://github.com/agile-edgex/edgex/blob/master/README.md#prerequisites).
 
 ## Versioning
 
