@@ -81,41 +81,42 @@ func (f *Conversion) TransformToJSON(ctx interfaces.AppFunctionContext, data int
 	return false, fmt.Errorf("function TransformToJSON in pipeline '%s': unexpected type received", ctx.PipelineId())
 }
 
-// TransformToIoT transforms an EdgeX event to IoT model.
+// TransformToRoma transforms an EdgeX event to Huawei Roma.
 // It will return an error and stop the pipeline if a non-edgex event is received or if no data is received.
-func (f *Conversion) TransformToIoT(ctx interfaces.AppFunctionContext, data interface{}) (continuePipeline bool, stringType interface{}) {
+func (f *Conversion) TransformToRoma(ctx interfaces.AppFunctionContext, data interface{}) (continuePipeline bool, stringType interface{}) {
 	if data == nil {
-		return false, fmt.Errorf("function TransformToIoT in pipeline '%s': No Data Received", ctx.PipelineId())
+		return false, fmt.Errorf("function TransformToRoma in pipeline '%s': No Data Received", ctx.PipelineId())
 	}
 
 	ctx.LoggingClient().Debugf("Transforming to IoT in pipeline '%s'", ctx.PipelineId())
 
 	result, ok := data.(dtos.Event)
 	if !ok {
-		return false, fmt.Errorf("function TransformToIoT in pipeline '%s': unexpected type received", ctx.PipelineId())
+		return false, fmt.Errorf("function TransformToRoma in pipeline '%s': unexpected type received", ctx.PipelineId())
 	}
 
 	// 格式转换
-	reported := make(map[string]any)
+	properties := make(map[string]string)
 	for _, r := range result.Readings {
-		reported[r.ResourceName] = map[string]string{
-			"value":     r.Value,
-			"eventTime": time.Unix(0, r.Origin).Format("20060102'T'150405'Z'"),
-		}
+		properties[r.ResourceName] = r.Value
 	}
-	service := map[string]any{
-		"serviceId": result.SourceName,
-		"eventTime": time.Unix(0, result.Origin).Format("20060102'T'150405'Z'"),
-		"properties": map[string]any{
-			"reported": reported,
+	services := map[string]any{
+		"services": []map[string]any{
+			{
+				"data":      properties,
+				"serviceId": result.SourceName,
+				"eventTime": time.Unix(0, result.Origin).Format("20060102T150405Z"),
+			},
 		},
 	}
-	iot := map[string]any{
-		"deviceId": result.DeviceName,
-		"services": []map[string]any{service},
+
+	devices := map[string]any{
+		"devices": []map[string]any{
+			{"deviceId": result.DeviceName, "services": services},
+		},
 	}
 
-	b, err := json.Marshal(iot)
+	b, err := json.Marshal(devices)
 	if err != nil {
 		return false, fmt.Errorf("unable to marshal map to JSON in pipeline '%s': %s", ctx.PipelineId(), err.Error())
 	}

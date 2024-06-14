@@ -69,7 +69,7 @@ const (
 	TransformType       = "type"
 	TransformXml        = "xml"
 	TransformJson       = "json"
-	TransformIoT        = "iot"
+	TransformRoma       = "roma"
 	AuthMode            = "authmode"
 	Tags                = "tags"
 	ResponseContentType = "responsecontenttype"
@@ -189,15 +189,15 @@ func (app *Configurable) Transform(parameters map[string]string) interfaces.AppF
 		return transform.TransformToXML
 	case TransformJson:
 		return transform.TransformToJSON
-	case TransformIoT:
-		return transform.TransformToIoT
+	case TransformRoma:
+		return transform.TransformToRoma
 	default:
 		app.lc.Errorf(
 			"Invalid transform type '%s'. Must be '%s' or '%s' or '%s'",
 			transformType,
 			TransformXml,
 			TransformJson,
-			TransformIoT)
+			TransformRoma)
 		return nil
 	}
 }
