@@ -100,19 +100,19 @@ func (f *Conversion) TransformToRoma(ctx interfaces.AppFunctionContext, data int
 	for _, r := range result.Readings {
 		properties[r.ResourceName] = r.Value
 	}
-	services := map[string]any{
-		"services": []map[string]any{
-			{
-				"data":      properties,
-				"serviceId": result.SourceName,
-				"eventTime": time.Unix(0, result.Origin).Format("20060102T150405Z"),
-			},
-		},
-	}
 
 	devices := map[string]any{
 		"devices": []map[string]any{
-			{"deviceId": result.DeviceName, "services": services},
+			{
+				"deviceId": result.DeviceName,
+				"services": []map[string]any{
+					{
+						"data":      properties,
+						"serviceId": result.SourceName,
+						"eventTime": time.Unix(0, result.Origin).UTC().Format("20060102T150405Z"),
+					},
+				},
+			},
 		},
 	}
 
