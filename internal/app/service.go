@@ -326,7 +326,7 @@ func (svc *Service) LoadConfigurableFunctionPipelines() (map[string]interfaces.F
 
 			functionNames := util.DeleteEmptyAndTrim(strings.FieldsFunc(perTopicPipeline.ExecutionOrder, util.SplitComma))
 
-			transforms, err := svc.loadConfigurablePipelineTransforms(perTopicPipeline.Id, functionNames, pipelineConfig.Functions, configurable)
+			transforms, err := svc.loadConfigurablePipelineTransforms(perTopicPipeline.Id, functionNames, perTopicPipeline.Functions, configurable)
 			if err != nil {
 				return nil, err
 			}

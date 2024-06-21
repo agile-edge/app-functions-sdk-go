@@ -150,6 +150,9 @@ type TopicPipeline struct {
 	Topics string
 	// ExecutionOrder is a list of functions, in execution order, for the pipeline instance
 	ExecutionOrder string
+	// Functions is a collection of pipeline functions with configured parameters to be used in the ExecutionOrder of one
+	// of the configured pipelines
+	Functions map[string]PipelineFunction
 }
 
 // PipelineFunction is a collection of built-in pipeline functions configurations.
