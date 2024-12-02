@@ -17,7 +17,7 @@
 package internal
 
 import (
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
 )
 
 const (

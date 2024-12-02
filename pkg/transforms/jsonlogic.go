@@ -25,8 +25,8 @@ import (
 
 	"github.com/diegoholiveira/jsonlogic/v3"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/util"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/util"
 )
 
 // JSONLogic ...

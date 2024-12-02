@@ -21,9 +21,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
-	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-messaging/v3/pkg/types"
 )
 
 type TriggerConfig struct {

@@ -16,9 +16,9 @@
 package container
 
 import (
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 )
 
 // StoreClientName contains the name of interfaces.StoreClient implementation in the DIC.

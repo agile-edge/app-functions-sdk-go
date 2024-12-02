@@ -19,9 +19,9 @@ package transforms
 import (
 	"testing"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos/requests"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos/requests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

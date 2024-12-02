@@ -19,9 +19,9 @@ package transforms
 import (
 	"fmt"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
 )
 
 // Tags contains the list of Tag key/values

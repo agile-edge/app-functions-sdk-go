@@ -25,16 +25,16 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/bootstrap/container"
-	sdkCommon "github.com/agile-edgex/app-functions-sdk-go/v3/internal/common"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/bootstrap/container"
+	sdkCommon "github.com/agile-edge/app-functions-sdk-go/v3/internal/common"
 
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/config"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	"github.com/agile-edgex/go-mod-registry/v3/registry"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v3/config"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-registry/v3/registry"
 	"github.com/stretchr/testify/assert"
 )
 

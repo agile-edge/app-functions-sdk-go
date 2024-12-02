@@ -25,20 +25,20 @@ import (
 	"regexp"
 	"strings"
 
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	bootstrapInterfaces "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
-	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	bootstrapInterfaces "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/interfaces"
+	"github.com/agile-edge/go-mod-messaging/v3/pkg/types"
 	"github.com/google/uuid"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/bootstrap/container"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/bootstrap/container"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 
-	clients "github.com/agile-edgex/go-mod-core-contracts/v3/clients/interfaces"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
+	clients "github.com/agile-edge/go-mod-core-contracts/v3/clients/interfaces"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
 
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 )
 
 const (

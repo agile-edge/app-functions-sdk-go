@@ -17,7 +17,7 @@
 package app
 
 import (
-	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
+	"github.com/agile-edge/go-mod-messaging/v3/pkg/types"
 )
 
 type BackgroundMessage struct {

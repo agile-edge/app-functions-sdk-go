@@ -19,9 +19,10 @@ package app
 
 import (
 	"fmt"
-	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/go-mod-messaging/v3/pkg/types"
+
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 )
 
 type backgroundPublisher struct {

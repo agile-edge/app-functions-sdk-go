@@ -19,11 +19,12 @@ package app
 
 import (
 	"fmt"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/appfunction"
-	"github.com/google/uuid"
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/appfunction"
+	"github.com/google/uuid"
+	"github.com/stretchr/testify/require"
 
 	"github.com/stretchr/testify/assert"
 )

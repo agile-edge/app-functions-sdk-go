@@ -16,9 +16,10 @@ package models
 
 import (
 	"bytes"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
 	"reflect"
 	"testing"
+
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 )
 
 var TestUUIDValid = "fb49a277-9edf-4489-a89c-235b365107f7"

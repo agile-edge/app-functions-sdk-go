@@ -16,9 +16,9 @@
 package container
 
 import (
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/common"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/common"
 )
 
 // ConfigurationName contains the name of data's common.ConfigurationStruct implementation in the DIC.

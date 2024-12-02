@@ -17,10 +17,10 @@
 package interfaces
 
 import (
-	bootstrapInterfaces "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/interfaces"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
+	bootstrapInterfaces "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/interfaces"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/interfaces"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
 )
 
 const (

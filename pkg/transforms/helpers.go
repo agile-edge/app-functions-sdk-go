@@ -19,7 +19,7 @@ package transforms
 import (
 	"errors"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 )
 
 func createRegisterMetric(ctx interfaces.AppFunctionContext,

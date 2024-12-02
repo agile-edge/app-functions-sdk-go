@@ -24,10 +24,10 @@ import (
 
 	gometrics "github.com/rcrowley/go-metrics"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
 )
 
 // TODO: Remove sample metric and implement meaningful metrics if any needed.
@@ -49,7 +49,7 @@ type Sample struct {
 }
 
 // LogEventDetails is example of processing an Event and passing the original Event to next function in the pipeline
-// For more details on the Context API got here: https://docs.agile-edgex.org/latest/microservices/application/ContextAPI/
+// For more details on the Context API got here: https://docs.agile-edge.org/latest/microservices/application/ContextAPI/
 func (s *Sample) LogEventDetails(ctx interfaces.AppFunctionContext, data interface{}) (bool, interface{}) {
 	lc := ctx.LoggingClient()
 	lc.Debugf("LogEventDetails called in pipeline '%s'", ctx.PipelineId())
@@ -104,7 +104,7 @@ func (s *Sample) SendGetCommand(ctx interfaces.AppFunctionContext, data interfac
 	lc.Debugf("SendGetCommand function called in pipeline '%s'", ctx.PipelineId())
 
 	if data == nil {
-		// Go here for details on Error Handle: https://docs.agile-edgex.org/latest/microservices/application/ErrorHandling/
+		// Go here for details on Error Handle: https://docs.agile-edge.org/latest/microservices/application/ErrorHandling/
 		return false, fmt.Errorf("function SendGetCommand in pipeline '%s': No Data Received", ctx.PipelineId())
 	}
 
@@ -219,7 +219,7 @@ func (s *Sample) OutputXML(ctx interfaces.AppFunctionContext, data interface{}) 
 
 	// This sends the XML as a response. i.e. publish for MessageBus/MQTT triggers as configured or
 	// HTTP response to for the HTTP Trigger
-	// For more details on the SetResponseData() function go here: https://docs.agile-edgex.org/latest/microservices/application/ContextAPI/#complete
+	// For more details on the SetResponseData() function go here: https://docs.agile-edge.org/latest/microservices/application/ContextAPI/#complete
 	ctx.SetResponseData([]byte(xml))
 	ctx.SetResponseContentType(common.ContentTypeXML)
 

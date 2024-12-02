@@ -54,7 +54,7 @@ components:
           description: "A version number shows the API version in DTOs."
           type: string
         config:
-          description: "An object containing the service's configuration. Please refer to Core Data's configuration documentation for more details at [EdgeX Foundry Documentation](https://docs.agile-edgex.org)."
+          description: "An object containing the service's configuration. Please refer to Core Data's configuration documentation for more details at [EdgeX Foundry Documentation](https://docs.agile-edge.org)."
           type: object
         serviceName:
           description: "Outputs the name of the service the response is from"

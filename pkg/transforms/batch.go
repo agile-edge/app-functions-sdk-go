@@ -22,11 +22,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/common"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/util"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/common"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/util"
 )
 
 // BatchMode Enum for choosing behavior of Batch. Default is CountAndTime.

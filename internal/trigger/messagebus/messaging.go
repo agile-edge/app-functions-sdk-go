@@ -24,18 +24,18 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	"github.com/agile-edgex/go-mod-messaging/v3/messaging"
-	"github.com/agile-edgex/go-mod-messaging/v3/pkg/types"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-messaging/v3/messaging"
+	"github.com/agile-edge/go-mod-messaging/v3/pkg/types"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/trigger"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/util"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/trigger"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/util"
 )
 
 // Trigger implements Trigger to support MessageBusData

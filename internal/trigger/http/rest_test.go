@@ -24,21 +24,21 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/appfunction"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/runtime"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/trigger/http/mocks"
-	triggerMocks "github.com/agile-edgex/app-functions-sdk-go/v3/internal/trigger/mocks"
-	interfaceMocks "github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces/mocks"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/appfunction"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/runtime"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/trigger/http/mocks"
+	triggerMocks "github.com/agile-edge/app-functions-sdk-go/v3/internal/trigger/mocks"
+	interfaceMocks "github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces/mocks"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 	"github.com/stretchr/testify/assert"
 )
 

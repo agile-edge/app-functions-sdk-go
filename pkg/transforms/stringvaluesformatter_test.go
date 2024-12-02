@@ -17,11 +17,12 @@
 package transforms
 
 import (
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/appfunction"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"testing"
+
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/appfunction"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestStringValuesFormatter_invoke_nil(t *testing.T) {

@@ -17,7 +17,7 @@
 package transforms
 
 import (
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 )
 
 // StringValuesFormatter defines a function signature to perform string formatting operations using an AppFunction payload.

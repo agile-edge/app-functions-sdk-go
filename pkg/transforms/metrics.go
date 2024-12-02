@@ -19,9 +19,9 @@ package transforms
 import (
 	"fmt"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
+	"github.com/agile-edge/go-mod-core-contracts/v3/dtos"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 )
 
 // MetricsProcessor contains functions to process the Metric DTO
@@ -51,7 +51,7 @@ func (mp *MetricsProcessor) ToLineProtocol(ctx interfaces.AppFunctionContext, da
 	lc.Debugf("ToLineProtocol called in pipeline '%s'", ctx.PipelineId())
 
 	if data == nil {
-		// Go here for details on Error Handle: https://docs.agile-edgex.org/1.3/microservices/application/ErrorHandling/
+		// Go here for details on Error Handle: https://docs.agile-edge.org/1.3/microservices/application/ErrorHandling/
 		return false, fmt.Errorf("function ToLineProtocol in pipeline '%s': No Data Received", ctx.PipelineId())
 	}
 

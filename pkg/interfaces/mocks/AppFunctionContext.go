@@ -3,14 +3,14 @@
 package mocks
 
 import (
-	bootstrapinterfaces "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/interfaces"
-	clientsinterfaces "github.com/agile-edgex/go-mod-core-contracts/v3/clients/interfaces"
+	bootstrapinterfaces "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/interfaces"
+	clientsinterfaces "github.com/agile-edge/go-mod-core-contracts/v3/clients/interfaces"
 
-	dtos "github.com/agile-edgex/go-mod-core-contracts/v3/dtos"
+	dtos "github.com/agile-edge/go-mod-core-contracts/v3/dtos"
 
-	interfaces "github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	interfaces "github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 
-	logger "github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	logger "github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 
 	mock "github.com/stretchr/testify/mock"
 )

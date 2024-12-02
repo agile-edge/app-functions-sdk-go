@@ -20,16 +20,16 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/bootstrap/container"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/bootstrap/container"
 
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/secret"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/startup"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	clients "github.com/agile-edgex/go-mod-core-contracts/v3/clients/http"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
-	commonDtos "github.com/agile-edgex/go-mod-core-contracts/v3/dtos/common"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/secret"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/startup"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	clients "github.com/agile-edge/go-mod-core-contracts/v3/clients/http"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
+	commonDtos "github.com/agile-edge/go-mod-core-contracts/v3/dtos/common"
 )
 
 const (

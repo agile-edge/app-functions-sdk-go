@@ -22,11 +22,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/store/db/redis/models"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/store/db/redis/models"
 
-	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v3/config"
 
 	"github.com/gomodule/redigo/redis"
 )

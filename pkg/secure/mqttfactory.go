@@ -21,9 +21,9 @@ import (
 	"crypto/x509"
 	"errors"
 
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/messaging"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 	mqtt "github.com/eclipse/paho.mqtt.golang"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/messaging"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
 )
 
 type MqttFactory struct {

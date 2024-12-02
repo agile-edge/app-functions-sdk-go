@@ -22,15 +22,15 @@ import (
 	"sync"
 	"time"
 
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/common"
+	coreCommon "github.com/agile-edge/go-mod-core-contracts/v3/common"
 	MQTT "github.com/eclipse/paho.mqtt.golang"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/common"
-	coreCommon "github.com/agile-edgex/go-mod-core-contracts/v3/common"
 	gometrics "github.com/rcrowley/go-metrics"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/secure"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/util"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/secure"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/util"
 )
 
 // MQTTSecretSender ...

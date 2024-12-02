@@ -25,14 +25,14 @@ import (
 
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/messaging"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
-	"github.com/agile-edgex/go-mod-core-contracts/v3/clients/logger"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/messaging"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/go-mod-core-contracts/v3/clients/logger"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/appfunction"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/appfunction"
 )
 
 var lc logger.LoggingClient

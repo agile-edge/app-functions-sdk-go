@@ -23,12 +23,12 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/util"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/util"
 	gometrics "github.com/rcrowley/go-metrics"
 
-	"github.com/agile-edgex/go-mod-core-contracts/v3/common"
+	"github.com/agile-edge/go-mod-core-contracts/v3/common"
 )
 
 // HTTPSender ...

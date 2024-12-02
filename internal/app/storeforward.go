@@ -22,16 +22,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/bootstrap/container"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/common"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/store/db"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/internal/store/db/redis"
-	"github.com/agile-edgex/app-functions-sdk-go/v3/pkg/interfaces"
-	bootstrapContainer "github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/container"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/environment"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/bootstrap/secret"
-	bootstrapConfig "github.com/agile-edgex/go-mod-bootstrap/v3/config"
-	"github.com/agile-edgex/go-mod-bootstrap/v3/di"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/bootstrap/container"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/common"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/store/db"
+	"github.com/agile-edge/app-functions-sdk-go/v3/internal/store/db/redis"
+	"github.com/agile-edge/app-functions-sdk-go/v3/pkg/interfaces"
+	bootstrapContainer "github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/container"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/environment"
+	"github.com/agile-edge/go-mod-bootstrap/v3/bootstrap/secret"
+	bootstrapConfig "github.com/agile-edge/go-mod-bootstrap/v3/config"
+	"github.com/agile-edge/go-mod-bootstrap/v3/di"
 )
 
 // RegisterCustomStoreFactory allows registration of alternative storage implementation to back the Store&Forward loop
