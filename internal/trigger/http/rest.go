@@ -103,7 +103,7 @@ func (trigger *Trigger) requestHandler(writer http.ResponseWriter, r *http.Reque
 
 	correlationID := r.Header.Get(common.CorrelationHeader)
 
-	lc.Trace("Received message from http", common.CorrelationHeader, correlationID)
+	lc.Debug("Received message from http", common.CorrelationHeader, correlationID)
 	lc.Debug("Received message from http", common.ContentType, contentType)
 
 	envelope := types.MessageEnvelope{
@@ -147,7 +147,7 @@ func (trigger *Trigger) requestHandler(writer http.ResponseWriter, r *http.Reque
 	}
 
 	if appContext.ResponseData() != nil {
-		lc.Trace("Sent http response message", common.CorrelationHeader, correlationID)
+		lc.Debug("Sent http response message", common.CorrelationHeader, correlationID)
 	}
 }
 
@@ -164,7 +164,7 @@ func getResponseHandler(writer http.ResponseWriter, lc logger.LoggingClient) int
 		}
 
 		if ctx.ResponseData() != nil {
-			lc.Trace("Sent http response message", common.CorrelationHeader, ctx.CorrelationID())
+			lc.Debug("Sent http response message", common.CorrelationHeader, ctx.CorrelationID())
 		}
 		return nil
 	}

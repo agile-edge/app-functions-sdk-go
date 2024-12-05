@@ -110,7 +110,7 @@ func (sf *storeForwardInfo) storeForLaterRetry(
 	item := interfaces.NewStoredObject(sf.runtime.ServiceKey, payload, pipeline.Id, pipelinePosition, pipeline.Hash, appContext.GetAllValues())
 	item.CorrelationID = appContext.CorrelationID()
 
-	appContext.LoggingClient().Tracef("Storing data for later retry for pipeline '%s' (%s=%s)",
+	appContext.LoggingClient().Debugf("Storing data for later retry for pipeline '%s' (%s=%s)",
 		pipeline.Id,
 		common.CorrelationHeader,
 		appContext.CorrelationID())
@@ -198,7 +198,7 @@ func (sf *storeForwardInfo) processRetryItems(items []interfaces.StoredObject) (
 			item.RetryCount++
 			if config.Writable.StoreAndForward.MaxRetryCount == 0 ||
 				item.RetryCount < config.Writable.StoreAndForward.MaxRetryCount {
-				lc.Tracef("Export retry failed for pipeline '%s'. retries=%d, Incrementing retry count (%s=%s)",
+				lc.Debugf("Export retry failed for pipeline '%s'. retries=%d, Incrementing retry count (%s=%s)",
 					item.PipelineId,
 					item.RetryCount,
 					common.CorrelationHeader,
@@ -207,7 +207,7 @@ func (sf *storeForwardInfo) processRetryItems(items []interfaces.StoredObject) (
 				continue
 			}
 
-			lc.Tracef("Max retries exceeded for pipeline '%s'. retries=%d, Removing item from DB (%s=%s)",
+			lc.Debugf("Max retries exceeded for pipeline '%s'. retries=%d, Removing item from DB (%s=%s)",
 				item.PipelineId,
 				item.RetryCount,
 				common.CorrelationHeader,
@@ -216,7 +216,7 @@ func (sf *storeForwardInfo) processRetryItems(items []interfaces.StoredObject) (
 
 			// Note that item will be removed for DB below.
 		} else {
-			lc.Tracef("Retry successful for pipeline '%s'. Removing item from DB (%s=%s)",
+			lc.Debugf("Retry successful for pipeline '%s'. Removing item from DB (%s=%s)",
 				item.PipelineId,
 				common.CorrelationHeader,
 				item.CorrelationID)
@@ -234,7 +234,7 @@ func (sf *storeForwardInfo) retryExportFunction(item interfaces.StoredObject, pi
 		appContext.AddValue(strings.ToLower(k), v)
 	}
 
-	appContext.LoggingClient().Tracef("Retrying stored data for pipeline '%s' (%s=%s)",
+	appContext.LoggingClient().Debugf("Retrying stored data for pipeline '%s' (%s=%s)",
 		item.PipelineId,
 		common.CorrelationHeader,
 		appContext.CorrelationID())

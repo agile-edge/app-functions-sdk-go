@@ -250,7 +250,7 @@ func (sender *MQTTSecretSender) MQTTSend(ctx interfaces.AppFunctionContext, data
 	sender.mqttSizeMetrics.Update(int64(exportDataBytes))
 
 	ctx.LoggingClient().Debugf("Sent %d bytes of data to MQTT Broker in pipeline '%s'", exportDataBytes, ctx.PipelineId())
-	ctx.LoggingClient().Tracef("Data exported", "Transport", "MQTT", "pipeline", ctx.PipelineId(), coreCommon.CorrelationHeader, ctx.CorrelationID())
+	ctx.LoggingClient().Debugf("Data exported", "Transport", "MQTT", "pipeline", ctx.PipelineId(), coreCommon.CorrelationHeader, ctx.CorrelationID())
 
 	return true, nil
 }

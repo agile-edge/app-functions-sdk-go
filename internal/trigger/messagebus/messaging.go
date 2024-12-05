@@ -141,7 +141,7 @@ func (trigger *Trigger) Initialize(appWg *sync.WaitGroup, appCtx context.Context
 					}
 
 					lc.Debugf("Published background message to bus on %s topic", topic)
-					lc.Tracef("%s=%s", common.CorrelationHeader, msg.CorrelationID)
+					lc.Debugf("%s=%s", common.CorrelationHeader, msg.CorrelationID)
 				}()
 			}
 		}
@@ -166,7 +166,7 @@ func (trigger *Trigger) messageHandler(logger logger.LoggingClient, _ types.Topi
 		len(message.Payload),
 		message.ReceivedTopic,
 		message.ContentType)
-	logger.Tracef("MessageBus Trigger: Received message with %s=%s", common.CorrelationHeader, message.CorrelationID)
+	logger.Debugf("MessageBus Trigger: Received message with %s=%s", common.CorrelationHeader, message.CorrelationID)
 
 	appContext := trigger.serviceBinding.BuildContext(message)
 
@@ -223,7 +223,7 @@ func (trigger *Trigger) responseHandler(appContext interfaces.AppFunctionContext
 			pipeline.Id,
 			publishTopic,
 			len(appContext.ResponseData()))
-		lc.Tracef("MessageBus Trigger published message: %s=%s", common.CorrelationHeader, appContext.CorrelationID())
+		lc.Debugf("MessageBus Trigger published message: %s=%s", common.CorrelationHeader, appContext.CorrelationID())
 	}
 	return nil
 }

@@ -195,7 +195,7 @@ func (trigger *Trigger) messageHandler(_ pahoMqtt.Client, mqttMessage pahoMqtt.M
 		len(message.Payload),
 		message.ReceivedTopic,
 		message.ContentType)
-	lc.Tracef("%s=%s", commonContracts.CorrelationHeader, correlationID)
+	lc.Debugf("%s=%s", commonContracts.CorrelationHeader, correlationID)
 
 	ctx := trigger.serviceBinding.BuildContext(message)
 
@@ -232,7 +232,7 @@ func (trigger *Trigger) responseHandler(appContext interfaces.AppFunctionContext
 				pipeline.Id,
 				formattedTopic,
 				len(appContext.ResponseData()))
-			lc.Tracef("MQTT Trigger published message: %s=%s", commonContracts.CorrelationHeader, appContext.CorrelationID())
+			lc.Debugf("MQTT Trigger published message: %s=%s", commonContracts.CorrelationHeader, appContext.CorrelationID())
 		}
 	}
 	return nil

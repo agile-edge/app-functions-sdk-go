@@ -239,7 +239,7 @@ func (sender *HTTPSender) httpSend(ctx interfaces.AppFunctionContext, data inter
 	sender.httpSizeMetrics.Update(int64(exportDataBytes))
 
 	ctx.LoggingClient().Debugf("Sent %d bytes of data in pipeline '%s'. Response status is %s", exportDataBytes, ctx.PipelineId(), response.Status)
-	ctx.LoggingClient().Tracef("Data exported for pipeline '%s' (%s=%s)", ctx.PipelineId(), common.CorrelationHeader, ctx.CorrelationID())
+	ctx.LoggingClient().Debugf("Data exported for pipeline '%s' (%s=%s)", ctx.PipelineId(), common.CorrelationHeader, ctx.CorrelationID())
 
 	// This allows multiple HTTP Exports to be chained in the pipeline to send the same data to different destinations
 	// Don't need to read the response data since not going to return it so just return now.
